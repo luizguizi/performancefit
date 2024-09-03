@@ -68,6 +68,15 @@ const handleReset = () => {
                 value={peso}
                 />
             </View>
+            {resultImc !== null && (
+           <TouchableOpacity
+            style={[stylesForm.buttoncss, stylesForm.buttonContainer]}
+            onPress={handleReset}
+           >
+            <Text style={stylesForm.buttonText}>Reiniciar</Text>
+           </TouchableOpacity>
+        )}
+      
             {resultImc === null && (
                      <TouchableOpacity
                      style={[stylesForm.buttoncss, stylesForm.buttonContainer]}
@@ -79,14 +88,7 @@ const handleReset = () => {
             </View>
             
         <ResultImc messageResultImc={messageImc} resultImc={resultImc} />
-        {resultImc !== null && (
-           <TouchableOpacity
-            style={[stylesForm.buttoncss, stylesForm.buttonContainer]}
-            onPress={handleReset}
-           >
-            <Text style={stylesForm.buttonText}>Reiniciar</Text>
-           </TouchableOpacity>
-        )}
+      
       
         </View>
     );

@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, Pressable, Keyboard } from 'react-native';
 import Titulo from './src/components/title/Title';
 import From from './src/components/form/resultimc/From';
 
@@ -6,10 +6,12 @@ export default function App() {
   
   
   return (
-    <View style={styles.container}>
+   <Pressable onPress={Keyboard.dismiss} style={styles.container}>
+   <View>
       <Titulo />
       <From />
     </View>
+    </Pressable>
   );
 }
 
